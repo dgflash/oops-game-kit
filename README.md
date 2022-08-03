@@ -1,4 +1,4 @@
-# oops-framework
+# oops-game-kit
 
 #### 介绍
 基于 Oops Framework 提供的游戏项目开发模板，项目中提供了最新版本 Cocos Creator 3.x 插件与游戏资源初始化通用逻辑。
