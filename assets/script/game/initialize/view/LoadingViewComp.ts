@@ -2,14 +2,14 @@
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-03 10:20:31
+ * @LastEditTime: 2022-08-05 17:27:50
  */
 import { _decorator } from "cc";
 import { resLoader } from "../../../../../extensions/oops-plugin-framework/assets/core/common/loader/ResLoader";
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
 import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { CCVMParentComp } from "../../../../../extensions/oops-plugin-framework/assets/module/common/CCVMParentComp";
 import { UIID } from "../../common/config/GameUIConfig";
-import { CCVMParentComp } from "../../common/ecs/CCVMParentComp";
 
 const { ccclass, property } = _decorator;
 

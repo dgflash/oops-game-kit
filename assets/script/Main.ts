@@ -2,24 +2,34 @@
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-03 10:18:56
+ * @LastEditTime: 2022-08-05 17:27:25
  */
 import { profiler, _decorator } from 'cc';
 import { DEBUG } from 'cc/env';
+import { oops } from '../../extensions/oops-plugin-framework/assets/core/Oops';
+import { Root } from '../../extensions/oops-plugin-framework/assets/core/Root';
 import { ecs } from '../../extensions/oops-plugin-framework/assets/libs/ecs/ECS';
-import { CommonEnter } from './game/common/ecs/CommonEnter';
+import { UIConfigData } from './game/common/config/GameUIConfig';
 import { smc } from './game/common/ecs/SingletonModuleComp';
-import { Initialize } from './game/initialize/Initialize';
+import { EcsInitializeSystem, Initialize } from './game/initialize/Initialize';
 
 const { ccclass, property } = _decorator;
 
 @ccclass('Main')
-export class Main extends CommonEnter {
+export class Main extends Root {
     start() {
         if (DEBUG) profiler.showStats();
     }
 
-    protected async run() {
+    protected run() {
         smc.initialize = ecs.getEntity<Initialize>(Initialize);
+    }
+
+    protected initGui() {
+        oops.gui.init(UIConfigData);
+    }
+
+    protected initEcsSystem() {
+        oops.ecs.add(new EcsInitializeSystem());
     }
 }
