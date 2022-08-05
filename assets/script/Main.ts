@@ -2,7 +2,7 @@
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-05 17:27:25
+ * @LastEditTime: 2022-08-05 18:25:56
  */
 import { profiler, _decorator } from 'cc';
 import { DEBUG } from 'cc/env';
