@@ -5,8 +5,8 @@
  * @LastEditTime: 2022-08-03 10:07:06
  */
 
-import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
-import { Initialize } from "../../initialize/Initialize";
+import { ecs } from "../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { Initialize } from "../initialize/Initialize";
 
 /** 游戏模块 */
 @ecs.register('SingletonModule')
