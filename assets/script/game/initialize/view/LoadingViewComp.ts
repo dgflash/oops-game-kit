@@ -2,7 +2,7 @@
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-05 17:27:50
+ * @LastEditTime: 2022-08-08 09:59:48
  */
 import { _decorator } from "cc";
 import { resLoader } from "../../../../../extensions/oops-plugin-framework/assets/core/common/loader/ResLoader";
@@ -86,6 +86,8 @@ export class LoadingViewComp extends CCVMParentComp {
     /** 加载完成事件 */
     private onCompleteCallback() {
         this.ent.remove(LoadingViewComp);
+
+        // 进入自定义游戏内容界面
         oops.gui.open(UIID.Demo);
     }
 }
