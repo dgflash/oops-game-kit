@@ -3,18 +3,90 @@
 #### 介绍
 基于 Oops Framework 提供的游戏项目开发模板，项目中提供了最新版本 Cocos Creator 3.x 插件与游戏资源初始化通用逻辑。
 
-注：
-1. 执行 update-oops-plugin-framework.bat 更新最新版本框架插件（必选）
-1. 执行 update-oops-plugin-excel-to-json.bat 更新最新版本Excel转Json格式文件插件插件（可选）
-1. 执行 update-oops-plugin-hot-update.bat 更新最新版本热更新插件（可选）
-1. 插件不同版在分支中下载可手动下载复制到extensions文件夹中，Cocos Creator 3.6 版本才支持所有工具分离到插件中，主要为了方便后续在项目开发过程中同步升级最新版本框架。
-1. 学习交流 QQ 群：798575969
+#### 使用Oops Framework创建游戏模板项目
+1. 下载[模板项目](https://gitee.com/dgflash/oops-game-kit)
+```
+git clone https://gitee.com/dgflash/oops-game-kit.git
+```
 
-    ![](http://dgflash.gitee.io/oops-full-stack-web/doc/img/qq.png)
+2. 下载[Oops Framework](https://gitee.com/dgflash/oops-framework)
 
-#### 技术文档
-- [oops-framework update](https://gitee.com/dgflash/oops-framework/tree/master/doc/using.md)
-- [oops-framework](https://gitee.com/dgflash/oops-framework/tree/master/doc/core)
-- [ecs](https://gitee.com/dgflash/oops-framework/tree/master/doc/ecs/ecs.md)
-- [mvvm](https://gitee.com/dgflash/oops-framework/tree/master/doc/mvvm)
+##### 第一次安装框架插件
+###### windows
+```
+md extensions
+cd extensions
+git clone -b master https://gitee.com/dgflash/oops-plugin-framework.git
+git pull
+```
 
+###### mac
+```
+mkdir -p extensions
+cd extensions
+git clone -b master https://gitee.com/dgflash/oops-plugin-framework.git
+git pull
+```
+
+##### 模板项目目录结构
+```
+res                         - 预制引用的静态资源
+resources                   - 动态加载引用的资源
+    audio                       - 音乐资源
+    common                      - 公共资源
+    config                      - 配置资源
+        game                        - 游戏自定义内容配置数据表
+        config.json                 - 框架默认配置资源（可扩展内容）
+    content                     - 自定义动态加载内容资源
+    game                        - 核心玩法内容资源
+    gui                         - 界面资源
+        loading                     - 游戏初次加载界面
+    language                    - 多语言资源
+script                      - 游戏脚本
+    game                        - 游戏业务模块
+        common                      - 游戏公共模块
+            config                      - 游戏配置
+                GameEvent.ts                - 全局事件配置
+                GameUIConfig.ts             - 界面窗口配置（提供oops.gui模块使用的配置数据）
+            table                       - 游戏配置表对象(可通过oops-plugin-excel-to-json自动生成)
+        initialize                  - 游戏初始化模块
+        SingletonModuleComp.ts      - 游戏单例业务模块
+    Main.ts                     - 游戏入口脚本
+```
+
+根据上面的目录结构，在开发游戏时，可将资源存放到对应的文件夹中管理。这套模板项目自带以下游戏必备功能。
+- 屏幕自适应
+- 游戏本地配置数据获取
+- 游戏地址查询参数获取
+- 游戏初始化业务流程
+    - 初始可自定义资源加载提示界面
+- 加载与现实第一个游戏自定义界面
+
+#### 屏幕自适应
+Cocos Creator 菜单->项目->项目设置
+##### 横屏自适应
+![](http://dgflash.gitee.io/oops-full-stack-web/doc/kit/1.jpg)
+
+##### 竖屏自适应
+![](http://dgflash.gitee.io/oops-full-stack-web/doc/kit/2.jpg)
+
+设置好后，其它的交给框架自动处理即可。
+
+#### 游戏初始化模块
+##### 游戏启动时加载的必备资源
+initialize/bll/InitRes.ts
+
+这个脚本管理游戏启动时加载的必备资源，此处要注意的是，这里配置的资源尽量小一些，避免无提示加载阶段黑屏时间过长，导致游戏体验下降。
+- 加载公共资源
+- 加载多语言包（可选）
+- 加载自定义资源（可选）
+
+initialize/view/LoadingViewComp.ts
+
+这个脚本是游戏内容资源加载界面的控制脚本，游戏内容资源一般较大，会有加载进度条提示来提高游戏体验。所有资源加载完后，会通过执行以下脚本来显示游戏第一个自定义界面。
+```
+oops.gui.open(UIID.Demo);
+```
+
+#### 学习交流 QQ 群：798575969
+![](http://dgflash.gitee.io/oops-full-stack-web/doc/img/qq.png)

@@ -2,7 +2,7 @@
  * @Author: dgflash
  * @Date: 2022-07-22 17:06:22
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-05 17:27:40
+ * @LastEditTime: 2022-08-08 14:26:38
  */
 import { resLoader } from "../../../../../extensions/oops-plugin-framework/assets/core/common/loader/ResLoader";
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
@@ -29,7 +29,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
 
         // 加载自定义资源
         this.loadCustom(queue);
-        // 加载多语言包
+        // 加载多语言包加载多语言包
         this.loadLanguage(queue);
         // 加载公共资源
         this.loadCommon(queue);
@@ -55,7 +55,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
             if (lan == null) {
                 lan = "zh";
                 oops.storage.set("language", lan);
-            }
+            } 
 
             // 设置语言包路径
             oops.language.setAssetsPath(config.game.languagePathJson, config.game.languagePathTexture);

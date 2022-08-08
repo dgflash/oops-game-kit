@@ -2,7 +2,7 @@
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-08 11:43:37
+ * @LastEditTime: 2022-08-08 11:42:32
  */
 import { _decorator } from "cc";
 import { resLoader } from "../../../../../extensions/oops-plugin-framework/assets/core/common/loader/ResLoader";
