@@ -2,7 +2,7 @@
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-08 11:42:32
+ * @LastEditTime: 2022-08-10 18:07:35
  */
 import { _decorator } from "cc";
 import { resLoader } from "../../../../../extensions/oops-plugin-framework/assets/core/common/loader/ResLoader";
@@ -35,11 +35,11 @@ export class LoadingViewComp extends CCVMParentComp {
         // 获取用户信息的多语言提示文本
         this.data.prompt = oops.language.getLangByID("loading_load_player");
 
+        // 进入自定义游戏内容界面
+        oops.gui.open(UIID.Demo);
+
         // 关闭加载界面
         oops.gui.remove(UIID.Loading);
-
-        // 打开游戏主界面（自定义逻辑）
-        oops.gui.open(UIID.Demo);
     }
 
     start() {
@@ -86,8 +86,5 @@ export class LoadingViewComp extends CCVMParentComp {
     /** 加载完成事件 */
     private onCompleteCallback() {
         this.ent.remove(LoadingViewComp);
-
-        // 进入自定义游戏内容界面
-        oops.gui.open(UIID.Demo);
     }
 }
