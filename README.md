@@ -4,7 +4,7 @@
 基于 Oops Framework 提供的游戏项目开发模板，项目中提供了最新版本 Cocos Creator 3.x 插件与游戏资源初始化通用逻辑。
 
 #### 使用Oops Framework创建游戏模板项目
-1. 下载[模板项目](https://gitee.com/dgflash/oops-game-kit)
+1. 下载模板项目
 ```
 git clone https://gitee.com/dgflash/oops-game-kit.git
 ```
