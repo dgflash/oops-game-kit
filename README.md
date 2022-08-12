@@ -9,9 +9,7 @@
 git clone https://gitee.com/dgflash/oops-game-kit.git
 ```
 
-2. 下载[Oops Framework](https://gitee.com/dgflash/oops-framework)
-
-##### 框架插件安装与更新
+2. 下载框架插件
 ###### windows
 - 执行 update-oops-plugin-framework.bat 克隆与更新框架插件
 - 执行 update-oops-plugin-hot-update.bat 克隆与更新热更新插件
