@@ -11,22 +11,16 @@ git clone https://gitee.com/dgflash/oops-game-kit.git
 
 2. 下载[Oops Framework](https://gitee.com/dgflash/oops-framework)
 
-##### 第一次安装框架插件
+##### 框架插件安装与更新
 ###### windows
-```
-md extensions
-cd extensions
-git clone -b master https://gitee.com/dgflash/oops-plugin-framework.git
-git pull
-```
+- 执行 update-oops-plugin-framework.bat 克隆与更新框架插件
+- 执行 update-oops-plugin-hot-update.bat 克隆与更新热更新插件
+- 执行 update-oops-plugin-excel-to-json.bat 克隆与更新Excel转Json格式插件
 
 ###### mac
-```
-mkdir -p extensions
-cd extensions
-git clone -b master https://gitee.com/dgflash/oops-plugin-framework.git
-git pull
-```
+- 执行 update-oops-plugin-framework.sh 克隆与更新框架插件
+- 执行 update-oops-plugin-hot-update.sh 克隆与更新热更新插件
+- 执行 update-oops-plugin-excel-to-json.sh 克隆与更新Excel转Json格式插件
 
 ##### 模板项目目录结构
 ```
