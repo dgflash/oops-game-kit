@@ -4,7 +4,6 @@
  * @LastEditors: dgflash
  * @LastEditTime: 2022-08-08 14:26:38
  */
-import { resLoader } from "../../../../../extensions/oops-plugin-framework/assets/core/common/loader/ResLoader";
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
 import { AsyncQueue, NextFunction } from "../../../../../extensions/oops-plugin-framework/assets/libs/collection/AsyncQueue";
 import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
@@ -43,7 +42,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
     private loadCustom(queue: AsyncQueue) {
         queue.push(async (next: NextFunction, params: any, args: any) => {
             // 加载多语言对应字体
-            resLoader.load("language/font/" + oops.language.current, next);
+            oops.res.load("language/font/" + oops.language.current, next);
         });
     }
 
@@ -55,7 +54,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
             if (lan == null) {
                 lan = "zh";
                 oops.storage.set("language", lan);
-            } 
+            }
 
             // 设置语言包路径
             oops.language.setAssetsPath(config.game.languagePathJson, config.game.languagePathTexture);
@@ -68,7 +67,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
     /** 加载公共资源（必备） */
     private loadCommon(queue: AsyncQueue) {
         queue.push((next: NextFunction, params: any, args: any) => {
-            resLoader.loadDir("common", next);
+            oops.res.loadDir("common", next);
         });
     }
 
