@@ -1,26 +1,26 @@
 # oops-game-kit
 
-#### 介绍
+### 介绍
 基于 Oops Framework 提供的游戏项目开发模板，项目中提供了最新版本 Cocos Creator 3.x 插件与游戏资源初始化通用逻辑。
 
-#### 使用Oops Framework创建游戏模板项目
+### 使用Oops Framework创建游戏模板项目
 1. 下载模板项目
 ```
 git clone https://gitee.com/dgflash/oops-game-kit.git
 ```
 
 2. 下载框架插件
-###### windows
+#### windows
 - 执行 update-oops-plugin-framework.bat 克隆与更新框架插件
 - 执行 update-oops-plugin-hot-update.bat 克隆与更新热更新插件
 - 执行 update-oops-plugin-excel-to-json.bat 克隆与更新Excel转Json格式插件
 
-###### mac
+#### mac
 - 执行 update-oops-plugin-framework.sh 克隆与更新框架插件
 - 执行 update-oops-plugin-hot-update.sh 克隆与更新热更新插件
 - 执行 update-oops-plugin-excel-to-json.sh 克隆与更新Excel转Json格式插件
 
-##### 模板项目目录结构
+### 模板项目目录结构
 ```
 res                         - 预制引用的静态资源
 resources                   - 动态加载引用的资源
@@ -54,18 +54,18 @@ script                      - 游戏脚本
     - 初始可自定义资源加载提示界面
 - 加载与现实第一个游戏自定义界面
 
-#### 屏幕自适应
+### 屏幕自适应
 Cocos Creator 菜单->项目->项目设置
-##### 横屏自适应
+#### 横屏自适应
 ![](http://dgflash.gitee.io/oops-full-stack-web/doc/kit/1.jpg)
 
-##### 竖屏自适应
+#### 竖屏自适应
 ![](http://dgflash.gitee.io/oops-full-stack-web/doc/kit/2.jpg)
 
 设置好后，其它的交给框架自动处理即可。
 
-#### 游戏初始化模块
-##### 游戏启动时加载的必备资源
+### 游戏初始化模块
+#### 游戏启动时加载的必备资源
 initialize/bll/InitRes.ts
 
 这个脚本管理游戏启动时加载的必备资源，此处要注意的是，这里配置的资源尽量小一些，避免无提示加载阶段黑屏时间过长，导致游戏体验下降。
@@ -80,5 +80,9 @@ initialize/view/LoadingViewComp.ts
 oops.gui.open(UIID.Demo);
 ```
 
-#### 学习交流 QQ 群：798575969
+### QQ群
+- 798575969（1群） 
+- 621415300（2群）
+
+### QQ频道扫码加入，提供教程，持续更新
 ![](http://dgflash.gitee.io/oops-full-stack-web/doc/img/qq.png)
