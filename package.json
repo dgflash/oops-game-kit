@@ -1,13 +1,13 @@
 {
   "_sourceId": "c30b28da-749e-479b-bcb6-cecd8d7be9e3",
   "creator": {
-    "version": "3.6.1"
+    "version": "3.6.2"
+  },
+  "dependencies": {
+    "crypto-es": "^1.2.7"
   },
   "description": "游戏项目模板",
   "name": "oops-game-kit",
   "uuid": "00d7d957-a3e8-4ad6-80f4-2fcfb235bca4",
-  "version": "3.6.1",
-  "dependencies": {
-    "crypto-es": "^1.2.7"
-  }
+  "version": "3.6.2"
 }
