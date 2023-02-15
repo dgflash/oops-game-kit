@@ -25,6 +25,8 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
     entityEnter(e: Initialize): void {
         var queue: AsyncQueue = new AsyncQueue();
 
+        /** 加载远程资源配置 */
+        this.loadBundle(queue);
         // 加载自定义资源
         this.loadCustom(queue);
         // 加载多语言包加载多语言包
@@ -35,6 +37,24 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
         this.onComplete(queue, e);
 
         queue.play();
+    }
+
+    /** 加载远程资源配置 */
+    private loadBundle(queue: AsyncQueue) {
+        queue.push(async (next: NextFunction, params: any, args: any) => {
+            // 设置默认加载的外部资源包名
+            oops.res.defaultBundleName = oops.config.game.bundleName;
+
+            // 加载外部资源包
+            if (oops.config.game.bundleEnable) {
+                console.log("启用远程资源运行游戏");
+                await oops.res.loadBundle(oops.config.game.bundleServer, oops.config.game.bundleVersion);
+            }
+            else {
+                await oops.res.loadBundle(oops.config.game.bundleName);
+            }
+            next();
+        });
     }
 
     /** 加载自定义内容（可选） */

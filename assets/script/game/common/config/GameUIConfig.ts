@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-08-12 09:33:37
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-08 11:40:33
+ * @LastEditTime: 2023-02-15 09:38:36
  */
 
 import { LayerType, UIConfig } from "../../../../../extensions/oops-plugin-framework/assets/core/gui/layer/LayerManager";
@@ -20,7 +20,7 @@ export enum UIID {
 
 /** 打开界面方式的配置数据 */
 export var UIConfigData: { [key: number]: UIConfig } = {
-    [UIID.Loading]: { layer: LayerType.UI, prefab: "gui/loading/loading", bundle: "resources" },
+    [UIID.Loading]: { layer: LayerType.UI, prefab: "gui/loading/loading" },
     [UIID.Netinstable]: { layer: LayerType.PopUp, prefab: "common/prefab/netinstable" },
     [UIID.Window]: { layer: LayerType.Dialog, prefab: "common/prefab/window" },
     [UIID.Demo]: { layer: LayerType.UI, prefab: "gui/demo/demo" },

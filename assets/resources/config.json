@@ -17,5 +17,11 @@
             "json": "language/json",
             "texture": "language/texture"
         }
+    },
+    "bundle": {
+        "enable": false,
+        "server": "https://127.0.0.1:8080/bundle",
+        "name": "bundle",
+        "version": "b727c"
     }
 }
