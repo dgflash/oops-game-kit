@@ -81,8 +81,9 @@ oops.gui.open(UIID.Demo);
 ```
 
 ### QQ群
-- 798575969（1群已满） 
+- 798575969（1群） 
 - 621415300（2群）
+- 628575875（3群）
 
 ### QQ频道扫码加入，提供教程，持续更新
 ![](http://dgflash.gitee.io/oops-full-stack-web/doc/img/qq.png)
