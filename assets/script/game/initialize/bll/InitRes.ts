@@ -2,7 +2,7 @@
  * @Author: dgflash
  * @Date: 2022-07-22 17:06:22
  * @LastEditors: dgflash
- * @LastEditTime: 2022-08-08 14:26:38
+ * @LastEditTime: 2023-07-25 17:53:47
  */
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
 import { AsyncQueue, NextFunction } from "../../../../../extensions/oops-plugin-framework/assets/libs/collection/AsyncQueue";
@@ -74,9 +74,6 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
                 lan = "zh";
                 oops.storage.set("language", lan);
             }
-
-            // 设置语言包路径
-            oops.language.setAssetsPath(oops.config.game.languagePathJson, oops.config.game.languagePathTexture);
 
             // 加载语言包资源
             oops.language.setLanguage(lan, next);
