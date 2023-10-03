@@ -20,8 +20,8 @@
     },
     "bundle": {
         "enable": false,
-        "server": "https://127.0.0.1:8080/bundle",
+        "server": "http://localhost:8083/assets/bundle",
         "name": "bundle",
-        "version": "b727c"
+        "version": ""
     }
 }
