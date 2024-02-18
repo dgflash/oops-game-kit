@@ -17,6 +17,8 @@ export class InitResComp extends ecs.Comp {
     reset() { }
 }
 
+/** 初始化资源逻辑注册到Initialize模块中 */
+@ecs.register('Initialize')
 export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnterSystem {
     filter(): ecs.IMatcher {
         return ecs.allOf(InitResComp);
