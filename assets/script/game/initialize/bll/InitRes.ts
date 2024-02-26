@@ -7,6 +7,7 @@
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
 import { AsyncQueue, NextFunction } from "../../../../../extensions/oops-plugin-framework/assets/libs/collection/AsyncQueue";
 import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { ModuleUtil } from "../../../../../extensions/oops-plugin-framework/assets/module/common/ModuleUtil";
 import { UIID } from "../../common/config/GameUIConfig";
 import { Initialize } from "../Initialize";
 import { LoadingViewComp } from "../view/LoadingViewComp";
@@ -92,8 +93,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
     /** 加载完成进入游戏内容加载界面 */
     private onComplete(queue: AsyncQueue, e: Initialize) {
         queue.complete = async () => {
-            var node = await oops.gui.openAsync(UIID.Loading);
-            if (node) e.add(node.getComponent(LoadingViewComp) as ecs.Comp);
+            ModuleUtil.addView(e, LoadingViewComp, UIID.Loading);
             e.remove(InitResComp);
         };
     }

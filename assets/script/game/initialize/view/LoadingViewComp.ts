@@ -9,6 +9,7 @@ import { oops } from "../../../../../extensions/oops-plugin-framework/assets/cor
 import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
 import { CCVMParentComp } from "../../../../../extensions/oops-plugin-framework/assets/module/common/CCVMParentComp";
 import { UIID } from "../../common/config/GameUIConfig";
+import { ModuleUtil } from "../../../../../extensions/oops-plugin-framework/assets/module/common/ModuleUtil";
 
 const { ccclass, property } = _decorator;
 
@@ -74,8 +75,8 @@ export class LoadingViewComp extends CCVMParentComp {
     private onCompleteCallback() {
         // 获取用户信息的多语言提示文本
         this.data.prompt = oops.language.getLangByID("loading_load_player");
-        this.ent.remove(LoadingViewComp);
-        oops.gui.replace(UIID.Loading, UIID.Demo);
+        ModuleUtil.removeView(this.ent, LoadingViewComp, UIID.Loading);
+        oops.gui.open(UIID.Demo);
     }
 
     reset(): void { }
