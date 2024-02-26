@@ -30,17 +30,6 @@ export class LoadingViewComp extends CCVMParentComp {
 
     private progress: number = 0;
 
-    reset(): void {
-        // 获取用户信息的多语言提示文本
-        this.data.prompt = oops.language.getLangByID("loading_load_player");
-
-        // 进入自定义游戏内容界面
-        oops.gui.open(UIID.Demo);
-
-        // 关闭加载界面
-        oops.gui.remove(UIID.Loading);
-    }
-
     start() {
         this.enter();
     }
@@ -66,7 +55,6 @@ export class LoadingViewComp extends CCVMParentComp {
     private loadGameRes() {
         // 加载初始游戏内容资源的多语言提示文本
         this.data.prompt = oops.language.getLangByID("loading_load_game");
-
         oops.res.loadDir("game", this.onProgressCallback.bind(this), this.onCompleteCallback.bind(this));
     }
 
@@ -84,6 +72,11 @@ export class LoadingViewComp extends CCVMParentComp {
 
     /** 加载完成事件 */
     private onCompleteCallback() {
+        // 获取用户信息的多语言提示文本
+        this.data.prompt = oops.language.getLangByID("loading_load_player");
         this.ent.remove(LoadingViewComp);
+        oops.gui.replace(UIID.Loading, UIID.Demo);
     }
+
+    reset(): void { }
 }
