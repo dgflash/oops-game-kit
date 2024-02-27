@@ -9,9 +9,9 @@ import { oops } from "../../../../../extensions/oops-plugin-framework/assets/cor
 import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
 import { CCVMParentComp } from "../../../../../extensions/oops-plugin-framework/assets/module/common/CCVMParentComp";
 import { ModuleUtil } from "../../../../../extensions/oops-plugin-framework/assets/module/common/ModuleUtil";
-import { UIID } from "../../common/config/GameUIConfig";
-import { smc } from "../../common/SingletonModuleComp";
 import { DemoViewComp } from "../../account/view/DemoViewComp";
+import { smc } from "../../common/SingletonModuleComp";
+import { UIID } from "../../common/config/GameUIConfig";
 
 const { ccclass, property } = _decorator;
 
@@ -74,11 +74,11 @@ export class LoadingViewComp extends CCVMParentComp {
     }
 
     /** 加载完成事件 */
-    private onCompleteCallback() {
+    private async onCompleteCallback() {
         // 获取用户信息的多语言提示文本
         this.data.prompt = oops.language.getLangByID("loading_load_player");
+        await ModuleUtil.addViewAsync(smc.account, DemoViewComp, UIID.Demo);
         ModuleUtil.removeView(this.ent, LoadingViewComp, UIID.Loading);
-        ModuleUtil.addView(smc.account, DemoViewComp, UIID.Demo);
     }
 
     reset(): void { }
