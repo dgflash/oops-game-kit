@@ -10,8 +10,10 @@ import { LayerType, UIConfig } from "../../../../../extensions/oops-plugin-frame
 export enum UIID {
     /** 资源加载界面 */
     Loading = 1,
-    /** 弹窗界面 */
-    Window,
+    /** 提示弹出窗口 */
+    Alert,
+    /** 确认弹出窗口 */
+    Confirm,
     /** 加载与延时提示界面 */
     Netinstable,
     /** DEMO */
@@ -22,6 +24,7 @@ export enum UIID {
 export var UIConfigData: { [key: number]: UIConfig } = {
     [UIID.Loading]: { layer: LayerType.UI, prefab: "gui/loading/loading" },
     [UIID.Netinstable]: { layer: LayerType.PopUp, prefab: "common/prefab/netinstable" },
-    [UIID.Window]: { layer: LayerType.Dialog, prefab: "common/prefab/window" },
+    [UIID.Alert]: { layer: LayerType.Dialog, prefab: "common/prefab/alert" },
+    [UIID.Confirm]: { layer: LayerType.Dialog, prefab: "common/prefab/confirm" },
     [UIID.Demo]: { layer: LayerType.UI, prefab: "gui/demo/demo" },
 }
