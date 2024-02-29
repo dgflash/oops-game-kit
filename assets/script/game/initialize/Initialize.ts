@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-08-03 10:07:14
  */
 import { ecs } from "../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
-import { InitResComp, InitResSystem } from "./bll/InitRes";
+import { InitResComp } from "./bll/InitRes";
 
 /**
  * 游戏进入初始化模块
