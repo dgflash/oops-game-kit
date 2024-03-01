@@ -9,11 +9,14 @@
 import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
 
 /** 
- * 游戏帐号数据 
+ * 游戏账号数据 
  */
 @ecs.register('AccountModel')
 export class AccountModelComp extends ecs.Comp {
-    reset() {
+    /** 账号名 */
+    AccountName: string = null!;
 
+    reset() {
+        this.AccountName = null!;
     }
 }
