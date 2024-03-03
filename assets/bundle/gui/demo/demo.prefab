@@ -130,7 +130,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 279.9999541519953,
+      "width": 280,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -169,7 +169,7 @@
     "_string": "自定义游戏内容",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 42.599999999999994,
+    "_actualFontSize": 40,
     "_fontSize": 40,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
