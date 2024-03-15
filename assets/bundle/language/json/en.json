@@ -2,5 +2,18 @@
     "common_prompt_ok": "ok",
     "common_prompt_cancal": "cancal",
     "common_prompt_title": "System Prompt",
-    "common_prompt_content": "System Prompt Cpmtemt"
+    "common_prompt_content": "System Prompt Cpmtemt",
+    "Update_tips_force": "The current version is too old and requires downloading a new installation package to play the game. Do you want to update it?",
+    "Update_tipsreload_config": "Loading configuration",
+    "Update_tips_load_game": "Loading game",
+    "Update_tips_check_update": "Checking for updates",
+    "Update_tipsnew_version": "New version resource discovered",
+    "Update_tips_success": "Update completed, click OK to restart the game",
+    "Update_tips_update": "Updating:",
+    "Update_tips_update_fail": "Update failed",
+    "Update_tips_update_fail_click_retry": "Update failed, click retry",
+    "Update_tips_update_success": "Update successful",
+    "loading_load_json": "Load Json",
+    "loading_load_game": "Load Content",
+    "loading_load_player": "Get user information"
 }
