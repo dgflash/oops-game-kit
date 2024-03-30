@@ -1,8 +1,8 @@
 /*
  * @Author: dgflash
  * @Date: 2021-07-03 16:13:17
- * @LastEditors: dgflash
- * @LastEditTime: 2022-08-10 18:07:35
+ * @LastEditors: bansomin
+ * @LastEditTime: 2024-03-31 01:17:02
  */
 import { _decorator } from "cc";
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
@@ -77,8 +77,8 @@ export class LoadingViewComp extends CCVMParentComp {
     private async onCompleteCallback() {
         // 获取用户信息的多语言提示文本
         this.data.prompt = oops.language.getLangByID("loading_load_player");
-        await ModuleUtil.addViewAsync(smc.account, DemoViewComp, UIID.Demo);
-        ModuleUtil.removeView(this.ent, LoadingViewComp, UIID.Loading);
+        await ModuleUtil.addViewUiAsync(smc.account, DemoViewComp, UIID.Demo);
+        ModuleUtil.removeViewUi(this.ent, LoadingViewComp, UIID.Loading);
     }
 
     reset(): void { }
