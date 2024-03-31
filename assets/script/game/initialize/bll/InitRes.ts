@@ -1,8 +1,8 @@
 /*
  * @Author: dgflash
  * @Date: 2022-07-22 17:06:22
- * @LastEditors: dgflash
- * @LastEditTime: 2023-07-25 17:53:47
+ * @LastEditors: bansomin
+ * @LastEditTime: 2024-03-31 01:20:18
  */
 import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
 import { AsyncQueue, NextFunction } from "../../../../../extensions/oops-plugin-framework/assets/libs/collection/AsyncQueue";
@@ -93,7 +93,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
     /** 加载完成进入游戏内容加载界面 */
     private onComplete(queue: AsyncQueue, e: Initialize) {
         queue.complete = async () => {
-            ModuleUtil.addView(e, LoadingViewComp, UIID.Loading);
+            ModuleUtil.addViewUi(e, LoadingViewComp, UIID.Loading);
             e.remove(InitResComp);
         };
     }
