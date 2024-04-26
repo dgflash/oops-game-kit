@@ -9,7 +9,7 @@ const { ccclass, property } = _decorator;
 @ecs.register('DemoView', false)
 export class DemoViewComp extends CCComp {
     start() {
-      
+
     }
 
     reset() {
