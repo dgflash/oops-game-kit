@@ -57,10 +57,10 @@ script                      - 游戏脚本
 ### 屏幕自适应
 Cocos Creator 菜单->项目->项目设置
 #### 横屏自适应
-![](http://dgflash.gitee.io/oops-full-stack-web/doc/kit/1.jpg)
+![](https://oops-1255342636.cos.ap-shanghai.myqcloud.com/img/kit/1.jpg)
 
 #### 竖屏自适应
-![](http://dgflash.gitee.io/oops-full-stack-web/doc/kit/2.jpg)
+![](https://oops-1255342636.cos.ap-shanghai.myqcloud.com/img/kit/2.jpg)
 
 设置好后，其它的交给框架自动处理即可。
 
