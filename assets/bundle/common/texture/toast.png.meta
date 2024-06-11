@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "ef58b575-d5bd-4b6b-ac05-6364e90ff8fc",
+  "uuid": "bdc6c564-ad81-4651-ab71-5c81ead4122d",
   "files": [
     ".json",
     ".png"
@@ -10,7 +10,7 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "ef58b575-d5bd-4b6b-ac05-6364e90ff8fc@6c48a",
+      "uuid": "bdc6c564-ad81-4651-ab71-5c81ead4122d@6c48a",
       "displayName": "toast",
       "id": "6c48a",
       "name": "texture",
@@ -29,13 +29,13 @@
         "premultiplyAlpha": false,
         "anisotropy": 1,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ef58b575-d5bd-4b6b-ac05-6364e90ff8fc",
+        "imageUuidOrDatabaseUri": "bdc6c564-ad81-4651-ab71-5c81ead4122d",
         "visible": false
       }
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "ef58b575-d5bd-4b6b-ac05-6364e90ff8fc@f9941",
+      "uuid": "bdc6c564-ad81-4651-ab71-5c81ead4122d@f9941",
       "displayName": "toast",
       "id": "f9941",
       "name": "spriteFrame",
@@ -62,7 +62,7 @@
         "borderLeft": 0,
         "borderRight": 0,
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "ef58b575-d5bd-4b6b-ac05-6364e90ff8fc@6c48a",
+        "imageUuidOrDatabaseUri": "bdc6c564-ad81-4651-ab71-5c81ead4122d@6c48a",
         "atlasUuid": "",
         "packable": true,
         "pixelsToUnit": 100,
@@ -128,7 +128,7 @@
   },
   "userData": {
     "type": "sprite-frame",
-    "redirect": "ef58b575-d5bd-4b6b-ac05-6364e90ff8fc@6c48a",
+    "redirect": "bdc6c564-ad81-4651-ab71-5c81ead4122d@6c48a",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false
   }
