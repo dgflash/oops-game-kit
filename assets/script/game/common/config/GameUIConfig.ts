@@ -13,8 +13,6 @@ export enum UIID {
     Alert,
     /** 确认弹出窗口 */
     Confirm,
-    /** 加载与延时提示界面 */
-    Netinstable,
     /** DEMO */
     Demo
 }
@@ -22,7 +20,6 @@ export enum UIID {
 /** 打开界面方式的配置数据 */
 export var UIConfigData: { [key: number]: UIConfig } = {
     [UIID.Loading]: { layer: LayerType.UI, prefab: "gui/loading/loading" },
-    [UIID.Netinstable]: { layer: LayerType.PopUp, prefab: "common/prefab/netinstable" },
     [UIID.Alert]: { layer: LayerType.Dialog, prefab: "common/prefab/alert" },
     [UIID.Confirm]: { layer: LayerType.Dialog, prefab: "common/prefab/confirm" },
     [UIID.Demo]: { layer: LayerType.UI, prefab: "gui/demo/demo" },
