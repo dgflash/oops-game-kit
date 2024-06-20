@@ -139,8 +139,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 59.999994268999416,
-      "height": 50.400000000000006
+      "width": 60,
+      "height": 50.4
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -178,7 +178,7 @@
     "_string": "标题",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 31.95,
+    "_actualFontSize": 30,
     "_fontSize": 30,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
@@ -360,7 +360,7 @@
     "_string": "内容",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 27.689999999999998,
+    "_actualFontSize": 26,
     "_fontSize": 26,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
@@ -602,7 +602,7 @@
     "_string": "确认",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 21.299999999999997,
+    "_actualFontSize": 20,
     "_fontSize": 20,
     "_fontFamily": "Arial",
     "_lineHeight": 40,
@@ -935,7 +935,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "f9cfbca9-9f35-4dda-8925-64e34e6e9802@f9941",
+      "__uuid__": "18797068-e98a-43a6-a481-afde51c33361@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
