@@ -729,7 +729,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "56a0bfc3-686d-4e85-bb26-5f5a6855ae06@f9941",
+      "__uuid__": "0877fdd4-5605-41e6-b643-be4904d506b7@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 1,
@@ -798,22 +798,10 @@
       "b": 124,
       "a": 255
     },
-    "_normalSprite": {
-      "__uuid__": "56a0bfc3-686d-4e85-bb26-5f5a6855ae06@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
-    "_hoverSprite": {
-      "__uuid__": "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
-    "_pressedSprite": {
-      "__uuid__": "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
-    "_disabledSprite": {
-      "__uuid__": "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
-      "__expectedType__": "cc.SpriteFrame"
-    },
+    "_normalSprite": null,
+    "_hoverSprite": null,
+    "_pressedSprite": null,
+    "_disabledSprite": null,
     "_duration": 0.1,
     "_zoomScale": 0.9,
     "_target": {
@@ -832,7 +820,7 @@
     },
     "component": "",
     "_componentId": "653bf8VPC5Fn49zFJFqXVgx",
-    "handler": "onTouchEnd",
+    "handler": "onOk",
     "customEventData": ""
   },
   {
