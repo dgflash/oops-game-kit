@@ -4,7 +4,6 @@
     "version": "3.8.3"
   },
   "dependencies": {
-    "crypto-es": "^1.2.7"
   },
   "description": "游戏项目模板",
   "name": "oops-game-kit",
