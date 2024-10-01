@@ -15,7 +15,7 @@
         "_value": true
       },
       "skeletal-animation": {
-        "_value": true
+        "_value": false
       },
       "3d": {
         "_value": true
@@ -80,7 +80,7 @@
         "_value": false
       },
       "particle-2d": {
-        "_value": true
+        "_value": false
       },
       "audio": {
         "_value": true
@@ -119,7 +119,7 @@
         "_value": false
       },
       "procedural-animation": {
-        "_value": true
+        "_value": false
       },
       "custom-pipeline": {
         "_value": false
@@ -135,16 +135,13 @@
       "gfx-webgl",
       "intersection-2d",
       "meshopt",
-      "particle-2d",
-      "procedural-animation",
       "profiler",
-      "skeletal-animation",
       "tween",
       "ui"
     ],
     "noDeprecatedFeatures": {
-      "value": true,
-      "version": "`<=3.8.0`"
+      "value": false,
+      "version": ""
     }
   }
 }
