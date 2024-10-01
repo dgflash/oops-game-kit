@@ -1,1 +1,34 @@
-{"config":{"version":"1.0.5","package":"com.oops.game","localDataKey":"oops","localDataIv":"framework","httpServer":"http://192.168.0.150/main/","httpTimeout":10000,"frameRate":"60"},"language":{"type":["zh","en"],"path":{"json":"language/json","texture":"language/texture","spine":""}},"bundle":{"enable":false,"server":"http://localhost:8083/assets/bundle","name":"bundle","version":""}}
+{
+    "config": {
+        "version": "1.0.5",
+        "package": "com.oops.game",
+        "localDataKey": "oops",
+        "localDataIv": "framework",
+        "frameRate": "60",
+        "loadingTimeoutGui": 1000,
+        "httpServer": "http://192.168.0.150/main/",
+        "httpTimeout": 10000,
+        "webSocketIp": "127.0.0.1",
+        "webSocketProt": "8081",
+        "webSocketHeartTime": 6000,
+        "webSocketReceiveTime": 10000,
+        "webSocketReconnetTimeOut": 3000
+    },
+    "language": {
+        "type": [
+            "zh",
+            "en"
+        ],
+        "path": {
+            "json": "language/json",
+            "texture": "language/texture",
+            "spine": ""
+        }
+    },
+    "bundle": {
+        "enable": false,
+        "server": "http://localhost:8083/assets/bundle",
+        "name": "bundle",
+        "version": ""
+    }
+}
