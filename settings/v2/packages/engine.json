@@ -9,13 +9,13 @@
         "_value": true
       },
       "gfx-webgl2": {
-        "_value": true
+        "_value": false
       },
       "animation": {
         "_value": true
       },
       "skeletal-animation": {
-        "_value": false
+        "_value": true
       },
       "3d": {
         "_value": true
@@ -95,7 +95,7 @@
         "_value": true
       },
       "websocket": {
-        "_value": true
+        "_value": false
       },
       "websocket-server": {
         "_value": false
@@ -116,7 +116,7 @@
         "_value": false
       },
       "marionette": {
-        "_value": true
+        "_value": false
       },
       "procedural-animation": {
         "_value": true
@@ -133,20 +133,18 @@
       "audio",
       "base",
       "gfx-webgl",
-      "gfx-webgl2",
       "intersection-2d",
-      "marionette",
       "meshopt",
       "particle-2d",
       "procedural-animation",
       "profiler",
+      "skeletal-animation",
       "tween",
-      "ui",
-      "websocket"
+      "ui"
     ],
     "noDeprecatedFeatures": {
-      "value": false,
-      "version": ""
+      "value": true,
+      "version": "`<=3.8.0`"
     }
   }
 }

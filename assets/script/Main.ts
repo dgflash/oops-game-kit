@@ -30,8 +30,4 @@ export class Main extends Root {
     protected initGui() {
         oops.gui.init(UIConfigData);
     }
-
-    // protected initEcsSystem() {
-    //     oops.ecs.add(new EcsInitializeSystem());
-    // }
 }
