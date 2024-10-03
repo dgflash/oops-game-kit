@@ -4,10 +4,10 @@
         "package": "com.oops.game",
         "localDataKey": "oops",
         "localDataIv": "framework",
-        "frameRate": "60",
-        "loadingTimeoutGui": 1000,
         "httpServer": "http://192.168.0.150/main/",
         "httpTimeout": 10000,
+        "frameRate": "60",
+        "loadingTimeoutGui": 1000,
         "webSocketIp": "127.0.0.1",
         "webSocketProt": "8081",
         "webSocketHeartTime": 6000,
@@ -15,6 +15,7 @@
         "webSocketReconnetTimeOut": 3000
     },
     "language": {
+        "default": "zh",
         "type": [
             "zh",
             "en"
@@ -27,8 +28,10 @@
     },
     "bundle": {
         "enable": false,
-        "server": "http://localhost:8083/assets/bundle",
-        "name": "bundle",
-        "version": ""
+        "server": "http://localhost",
+        "default": "bundle",
+        "packages": {
+            "bundle": "ea6b9"
+        }
     }
 }
