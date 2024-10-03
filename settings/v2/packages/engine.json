@@ -110,10 +110,10 @@
         "_value": false
       },
       "spine": {
-        "_value": false
+        "_value": true
       },
       "dragon-bones": {
-        "_value": false
+        "_value": true
       },
       "marionette": {
         "_value": false
@@ -132,10 +132,12 @@
       "animation",
       "audio",
       "base",
+      "dragon-bones",
       "gfx-webgl",
       "intersection-2d",
       "meshopt",
       "profiler",
+      "spine",
       "tween",
       "ui"
     ],
