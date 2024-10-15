@@ -1,5 +1,5 @@
 {
-  "__version__": "1.0.9",
+  "__version__": "1.0.10",
   "modules": {
     "cache": {
       "base": {
@@ -121,8 +121,8 @@
       "procedural-animation": {
         "_value": true
       },
-      "custom-pipeline": {
-        "_value": false
+      "render-pipeline": {
+        "_option": "legacy-pipeline"
       }
     },
     "flags": {},
@@ -136,6 +136,7 @@
       "gfx-webgl",
       "gfx-webgl2",
       "intersection-2d",
+      "legacy-pipeline",
       "marionette",
       "meshopt",
       "particle-2d",
