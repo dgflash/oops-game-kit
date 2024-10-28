@@ -87,5 +87,4 @@ oops.gui.open(UIID.Demo);
 - 226524184（4群-推荐）
 - 741197640（5群-推荐）
 
-### QQ频道扫码加入，提供教程，持续更新
-![](http://dgflash.gitee.io/oops-full-stack-web/doc/img/qq.png)
+### QQ频道：q366856bf5
