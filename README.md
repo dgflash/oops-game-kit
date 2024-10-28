@@ -88,3 +88,5 @@ oops.gui.open(UIID.Demo);
 - 741197640（5群-推荐）
 
 ### QQ频道：q366856bf5
+
+### [点击了解作者其它产品](https://store.cocos.com/app/search?name=oops)
