@@ -11,6 +11,9 @@
       "gfx-webgl2": {
         "_value": true
       },
+      "gfx-webgpu": {
+        "_value": false
+      },
       "animation": {
         "_value": true
       },
@@ -37,26 +40,57 @@
       },
       "physics": {
         "_value": false,
-        "_option": "physics-ammo"
+        "_option": "physics-ammo",
+        "_flags": {
+          "physics-ammo": {
+            "LOAD_BULLET_MANUALLY": false
+          },
+          "physics-physx": {
+            "LOAD_PHYSX_MANUALLY": false
+          }
+        }
       },
       "physics-ammo": {
-        "_value": true
+        "_value": true,
+        "_flags": {
+          "physics-ammo": {
+            "LOAD_BULLET_MANUALLY": false
+          }
+        }
       },
       "physics-cannon": {
         "_value": false
       },
       "physics-physx": {
-        "_value": false
+        "_value": false,
+        "_flags": {
+          "physics-physx": {
+            "LOAD_PHYSX_MANUALLY": false
+          }
+        }
       },
       "physics-builtin": {
         "_value": false
       },
       "physics-2d": {
         "_value": false,
-        "_option": "physics-2d-box2d"
+        "_option": "physics-2d-box2d",
+        "_flags": {
+          "physics-2d-box2d-wasm": {
+            "LOAD_BOX2D_MANUALLY": false
+          }
+        }
       },
       "physics-2d-box2d": {
         "_value": true
+      },
+      "physics-2d-box2d-wasm": {
+        "_value": false,
+        "_flags": {
+          "physics-2d-box2d-wasm": {
+            "LOAD_BOX2D_MANUALLY": false
+          }
+        }
       },
       "physics-2d-builtin": {
         "_value": false
@@ -109,8 +143,16 @@
       "tiled-map": {
         "_value": false
       },
+      "vendor-google": {
+        "_value": false
+      },
       "spine": {
-        "_value": true
+        "_value": true,
+        "_flags": {
+          "spine": {
+            "LOAD_SPINE_MANUALLY": false
+          }
+        }
       },
       "dragon-bones": {
         "_value": true
@@ -121,8 +163,18 @@
       "procedural-animation": {
         "_value": true
       },
+      "custom-pipeline-post-process": {
+        "_value": false
+      },
       "render-pipeline": {
+        "_value": true,
         "_option": "legacy-pipeline"
+      },
+      "custom-pipeline": {
+        "_value": true
+      },
+      "legacy-pipeline": {
+        "_value": false
       }
     },
     "flags": {},
