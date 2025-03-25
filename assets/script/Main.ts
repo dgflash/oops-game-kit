@@ -20,6 +20,10 @@ const { ccclass, property } = _decorator;
 export class Main extends Root {
     start() {
         if (DEBUG) profiler.showStats();
+
+
+        oops.storage.set("AAAA", "1111");
+        console.log(oops.storage.get("AAAA"));
     }
 
     protected run() {
