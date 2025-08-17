@@ -1,7 +1,7 @@
 {
   "_sourceId": "c30b28da-749e-479b-bcb6-cecd8d7be9e3",
   "creator": {
-    "version": "3.8.5"
+    "version": "3.8.6"
   },
   "dependencies": {
     "crypto-es": "^1.2.7"
