@@ -4,7 +4,7 @@
  * @LastEditors: dgflash
  * @LastEditTime: 2022-08-01 13:49:37
  */
-import { ecs } from "../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { ecs } from "db://oops-framework/libs/ecs/ECS";
 import { AccountModelComp } from "./model/AccountModelComp";
 
 /** 账号模块 */

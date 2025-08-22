@@ -5,10 +5,10 @@
  * @LastEditTime: 2024-03-31 01:17:02
  */
 import { _decorator } from "cc";
-import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
-import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
-import { CCVMParentComp } from "../../../../../extensions/oops-plugin-framework/assets/module/common/CCVMParentComp";
-import { ModuleUtil } from "../../../../../extensions/oops-plugin-framework/assets/module/common/ModuleUtil";
+import { oops } from "db://oops-framework/core/Oops";
+import { ecs } from "db://oops-framework/libs/ecs/ECS";
+import { CCVMParentComp } from "db://oops-framework/module/common/CCVMParentComp";
+import { ModuleUtil } from "db://oops-framework/module/common/ModuleUtil";
 import { DemoViewComp } from "../../account/view/DemoViewComp";
 import { smc } from "../../common/SingletonModuleComp";
 import { UIID } from "../../common/config/GameUIConfig";

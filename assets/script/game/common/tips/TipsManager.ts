@@ -5,8 +5,8 @@
  * @LastEditTime: 2022-08-05 10:13:47
  */
 import { Node, tween, Vec3 } from "cc";
-import { UICallbacks } from "../../../../../extensions/oops-plugin-framework/assets/core/gui/layer/Defines";
-import { oops } from "../../../../../extensions/oops-plugin-framework/assets/core/Oops";
+import { UICallbacks } from "db://oops-framework/core/gui/layer/LayerUIElement";
+import { oops } from "db://oops-framework/core/Oops";
 import { UIID } from "../config/GameUIConfig";
 
 /** 提示窗口管理 */
@@ -65,7 +65,9 @@ class TipsManager {
             onBeforeRemove: (node, next) => {
                 tween(node)
                     .to(0.2, { scale: new Vec3(0.1, 0.1, 0.1) })
-                    .call(next)
+                    .call(() => {
+                        next();
+                    })
                     .start();
             },
         }

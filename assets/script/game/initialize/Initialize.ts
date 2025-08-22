@@ -4,7 +4,7 @@
  * @LastEditors: dgflash
  * @LastEditTime: 2022-08-03 10:07:14
  */
-import { ecs } from "../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { ecs } from "db://oops-framework/libs/ecs/ECS";
 import { InitResComp } from "./bll/InitRes";
 
 /**

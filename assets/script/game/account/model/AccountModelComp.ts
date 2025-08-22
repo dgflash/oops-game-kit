@@ -6,7 +6,7 @@
  * @LastEditors: dgflash
  * @LastEditTime: 2022-07-25 17:03:45
  */
-import { ecs } from "../../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { ecs } from "db://oops-framework/libs/ecs/ECS";
 
 /** 
  * 游戏账号数据 

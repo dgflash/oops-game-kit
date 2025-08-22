@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-08-08 12:04:30
  */
 
-import { ecs } from "../../../../extensions/oops-plugin-framework/assets/libs/ecs/ECS";
+import { ecs } from "db://oops-framework/libs/ecs/ECS";
 import { Account } from "../account/Account";
 import { Initialize } from "../initialize/Initialize";
 
