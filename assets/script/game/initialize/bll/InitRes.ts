@@ -7,8 +7,6 @@
 import { oops } from "db://oops-framework/core/Oops";
 import { AsyncQueue, NextFunction } from "db://oops-framework/libs/collection/AsyncQueue";
 import { ecs } from "db://oops-framework/libs/ecs/ECS";
-import { ModuleUtil } from "db://oops-framework/module/common/ModuleUtil";
-import { UIID } from "../../common/config/GameUIConfig";
 import { Initialize } from "../Initialize";
 import { LoadingViewComp } from "../view/LoadingViewComp";
 
@@ -73,7 +71,7 @@ export class InitResSystem extends ecs.ComblockSystem implements ecs.IEntityEnte
     /** 加载完成进入游戏内容加载界面 */
     private onComplete(queue: AsyncQueue, e: Initialize) {
         queue.complete = async () => {
-            ModuleUtil.addViewUi(e, LoadingViewComp, UIID.Loading);
+            await e.addUi(LoadingViewComp);
             e.remove(InitResComp);
         };
     }

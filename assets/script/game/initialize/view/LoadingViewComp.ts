@@ -5,20 +5,22 @@
  * @LastEditTime: 2024-03-31 01:17:02
  */
 import { _decorator } from "cc";
+import { gui } from "db://oops-framework/core/gui/Gui";
+import { LayerType } from "db://oops-framework/core/gui/layer/LayerEnum";
 import { oops } from "db://oops-framework/core/Oops";
 import { ecs } from "db://oops-framework/libs/ecs/ECS";
-import { CCVMParentComp } from "db://oops-framework/module/common/CCVMParentComp";
-import { ModuleUtil } from "db://oops-framework/module/common/ModuleUtil";
+import { CCViewVM } from "db://oops-framework/module/common/CCViewVM";
 import { DemoViewComp } from "../../account/view/DemoViewComp";
 import { smc } from "../../common/SingletonModuleComp";
-import { UIID } from "../../common/config/GameUIConfig";
+import { Initialize } from "../Initialize";
 
 const { ccclass, property } = _decorator;
 
 /** 游戏资源加载 */
 @ccclass('LoadingViewComp')
 @ecs.register('LoadingView', false)
-export class LoadingViewComp extends CCVMParentComp {
+@gui.register('LoadingView', { layer: LayerType.UI, prefab: "gui/loading/loading" })
+export class LoadingViewComp extends CCViewVM<Initialize> {
     /** VM 组件绑定数据 */
     data: any = {
         /** 加载资源当前进度 */
@@ -77,8 +79,8 @@ export class LoadingViewComp extends CCVMParentComp {
     private async onCompleteCallback() {
         // 获取用户信息的多语言提示文本
         this.data.prompt = oops.language.getLangByID("loading_load_player");
-        await ModuleUtil.addViewUiAsync(smc.account, DemoViewComp, UIID.Demo);
-        ModuleUtil.removeViewUi(this.ent, LoadingViewComp, UIID.Loading);
+        await smc.account.addUi(DemoViewComp);
+        this.remove();
     }
 
     reset(): void { }

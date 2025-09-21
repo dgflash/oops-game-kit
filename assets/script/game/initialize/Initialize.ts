@@ -5,6 +5,7 @@
  * @LastEditTime: 2022-08-03 10:07:14
  */
 import { ecs } from "db://oops-framework/libs/ecs/ECS";
+import { CCEntity } from "db://oops-framework/module/common/CCEntity";
 import { InitResComp } from "./bll/InitRes";
 
 /**
@@ -13,7 +14,7 @@ import { InitResComp } from "./bll/InitRes";
  * 2、加载默认资源
  */
 @ecs.register('Initialize')
-export class Initialize extends ecs.Entity {
+export class Initialize extends CCEntity {
     protected init() {
         // 初始化游戏公共资源
         this.add(InitResComp);
